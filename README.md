@@ -59,3 +59,33 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## Clearing the cash
+
+To clear all relevant caches at once:
+Code
+
+php artisan optimize:clear
+This single command clears compiled views, application cache, route cache, configuration cache, and removes compiled service and package files.
+To clear specific caches individually:
+Application Cache: Clears all items from the default cache store.
+Code
+
+    php artisan cache:clear
+Configuration Cache: Clears the cached configuration files, which can be useful after modifying .env or configuration files.
+Code
+
+    php artisan config:clear
+Route Cache: Clears the cached routes, often needed after adding or modifying routes.
+Code
+
+    php artisan route:clear
+View Cache: Clears compiled Blade views.
+Code
+
+    php artisan view:clear
+Event Cache: Clears cached event listeners and subscribers.
+Code
+
+    php artisan event:clear
